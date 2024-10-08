@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id = "userModelFactory1" class = "com.future.spring.rocket.factory.UserModelFactory" factory-method="buildUserModel1">
+    </bean>
+
+    <bean id = "userModelFactory2" class = "com.future.spring.rocket.factory.UserModelFactory" factory-method="buildUserModel2">
+        <constructor-arg index="0" value="Tom"/>
+        <constructor-arg index="1" value="33"/>
+    </bean>
+
+
+
+</beans>

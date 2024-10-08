@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" default-autowire="constructor">
+
+    <bean id="extendServiceA" class="com.future.spring.rocket.entity.ExtendServiceAModel"/>
+
+    <bean id="baseExtend" abstract="true">
+        <property name="name" value="Running"/>
+        <property name="serviceA" ref="extendServiceA"/>
+    </bean>
+
+    <bean id="extendServiceB" class="com.future.spring.rocket.entity.ExtendServiceBModel" parent="baseExtend"/>
+
+    <bean id="extendServiceC" class="com.future.spring.rocket.entity.ExtendServiceCModel" parent="baseExtend">
+        <property name="name" value="Jumping"/>
+    </bean>
+</beans>

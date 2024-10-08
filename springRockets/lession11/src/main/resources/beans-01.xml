@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" default-autowire="constructor">
+
+    <bean id="prototypeModel" class="com.future.spring.rocket.entity.PrototypeModel" scope="prototype"/>
+    <bean id="prototypeAppModel" class="com.future.spring.rocket.entity.PrototypeApplicationContextModel"/>
+    <bean id="prototypeLookupModel" class="com.future.spring.rocket.entity.PrototypeLookupMethodModel">
+        <lookup-method name="getPrototypeModel" bean="prototypeModel"/>
+    </bean>
+    <bean id="serviceBMethodReplacer" class="com.future.spring.rocket.custom.impl.ServiceBMethodReplacer"/>
+    <bean id="prototypeReplayModel" class="com.future.spring.rocket.entity.PrototypeReplaceMethodModel">
+        <replaced-method name="getPrototypeModel" replacer="serviceBMethodReplacer"/>
+    </bean>
+</beans>

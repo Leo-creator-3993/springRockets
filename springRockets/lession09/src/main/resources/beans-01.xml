@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" default-autowire="constructor">
+
+    <bean id="realTimeBeanModel" class="com.future.spring.rocket.entity.RealTimeBeanModel"/>
+    <bean id="lazyInitBeanModel" class="com.future.spring.rocket.entity.LazyInitBeanModel" lazy-init="true"/>
+    <bean id="beTestLazyInitBeanModel" class="com.future.spring.rocket.entity.CompositeInitBeanModel$LazyModel" lazy-init="true"/>
+
+    <!--可以通过setter方式注入或者自动注入等方式, 此处以setter方式说明-->
+    <bean id="compositeInitBeanModel" class="com.future.spring.rocket.entity.CompositeInitBeanModel">
+        <property name="lazyModel" ref="beTestLazyInitBeanModel"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="car" class="com.future.spring.rocket.entity.Car">
+        <property name="brand" value="BYD"/>
+    </bean>
+
+    <bean id="friend1" class="com.future.spring.rocket.entity.Friend">
+        <constructor-arg index="0" value="Chinese"/>
+    </bean>
+
+    <bean id="friend2" class="com.future.spring.rocket.entity.Friend">
+        <constructor-arg index="0" value="USA"/>
+    </bean>
+    
+    <bean id="user0" class="com.future.spring.rocket.entity.User">
+        <property name="name" value="Jack"/>
+        <property name="age" value="28"/>
+        <property name="car" ref="car"/>
+        <property name="friendList">
+            <list>
+                <ref bean="friend1"/>
+                <ref bean="friend2"/>
+            </list>
+        </property>
+        <property name="habits">
+            <map>
+                <entry key="basketball" value="90"/>
+                <entry key="reading" value="88"/>
+                <entry key="run" value="95"/>
+                <entry key="guitar" value="90"/>
+            </map>
+        </property>
+        <property name="roles">
+            <set>
+                <value>"son"</value>
+                <value>"father"</value>
+                <value>"husband"</value>
+                <value>"employee"</value>
+            </set>
+        </property>
+    </bean>
+</beans>

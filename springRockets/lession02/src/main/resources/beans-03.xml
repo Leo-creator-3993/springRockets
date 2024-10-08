@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id = "userModelInstanceFactory" class="com.future.spring.rocket.factory.UserModelInstanceFactory"/>
+    <bean id = "instanceFactory1" factory-bean="userModelInstanceFactory" factory-method="instanceUserModel1">
+    </bean>
+
+    <bean id = "instanceFactory2" factory-bean="userModelInstanceFactory" factory-method="instanceUserModel2">
+        <constructor-arg index="0" value="Lucy"/>
+        <constructor-arg index="1" value="22"/>
+    </bean>
+</beans>

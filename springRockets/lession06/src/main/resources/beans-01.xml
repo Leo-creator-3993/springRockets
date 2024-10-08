@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" default-autowire="constructor">
+
+    <!--根据类型byType自动注入-->
+    <bean id="beanCDM" class="com.future.spring.rocket.entity.BeanCreateDestroyModel" autowire="byType"/>
+
+    <!--构造器注入,被依赖的bean会先创建-->
+    <bean id="cdModel1" class="com.future.spring.rocket.entity.BeanCreateDestroyModel$CDModel3"/>
+    <bean id="cdModel2" class="com.future.spring.rocket.entity.BeanCreateDestroyModel$CDModel2"/>
+    <bean id="cdModel3" class="com.future.spring.rocket.entity.BeanCreateDestroyModel$CDModel1"/>
+
+    <!--通过depends-on影响bean的创建顺序-->
+    <bean id="cdModel5" class="com.future.spring.rocket.entity.BeanCreateDestroyModel$CDModel5" depends-on="cdModel4,cdModel6"/>
+    <bean id="cdModel4" class="com.future.spring.rocket.entity.BeanCreateDestroyModel$CDModel4"/>
+    <bean id="cdModel6" class="com.future.spring.rocket.entity.BeanCreateDestroyModel$CDModel6"/>
+</beans>

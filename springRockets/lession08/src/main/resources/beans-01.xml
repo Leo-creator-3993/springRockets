@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" default-autowire="constructor">
+
+    <bean id="serviceA" class="com.future.spring.rocket.entity.AutowireCandidateModel$ServiceA" autowire-candidate="false" primary="true"/>
+    <bean id="serviceB" class="com.future.spring.rocket.entity.AutowireCandidateModel$ServiceB" autowire-candidate="true"/>
+    <bean id="autowireCandidateModel" class="com.future.spring.rocket.entity.AutowireCandidateModel" autowire="byType"/>
+</beans>

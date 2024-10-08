@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="service1" class="com.future.spring.rocket.entity.DiAutowireModel$Service1">
+        <property name="desc" value="service1"/>
+    </bean>
+
+    <bean id="service2" class="com.future.spring.rocket.entity.DiAutowireModel$Service2">
+        <property name="desc" value="service2"/>
+    </bean>
+
+    <bean id="service2X" class="com.future.spring.rocket.entity.DiAutowireModel$Service2">
+        <property name="desc" value="service2X"/>
+    </bean>
+
+    <bean id="diAutowireM1" class="com.future.spring.rocket.entity.DiAutowireModel" autowire="byName">
+    </bean>
+
+    <bean id="diAutowireM2" class="com.future.spring.rocket.entity.DiAutowireModel" autowire="byName">
+        <property name="service1" ref="service1"/>
+        <property name="service2" ref="service2X"/>
+    </bean>
+
+    <bean id="diAutowireM3" class="com.future.spring.rocket.entity.DiAutowireModel" autowire="byType">
+        <property name="service2" ref="service2X"/>
+    </bean>
+
+    <bean id="constructorService1" class="com.future.spring.rocket.entity.DiAutowireConstructorModel$Service1">
+        <property name="desc" value="constructorService1"/>
+    </bean>
+
+    <bean id="constructorService2" class="com.future.spring.rocket.entity.DiAutowireConstructorModel$Service2">
+        <property name="desc" value="constructorService2"/>
+    </bean>
+
+    <bean id="diAutowireConstructor" class="com.future.spring.rocket.entity.DiAutowireConstructorModel" autowire="constructor">
+    </bean>
+
+    <bean id="service1Extend" class="com.future.spring.rocket.entity.DiAutowireModelExtend$Service1" autowire="byName">
+        <property name="spec" value="extendService1"/>
+    </bean>
+
+    <bean id="service2Extend" class="com.future.spring.rocket.entity.DiAutowireModelExtend$Service2" autowire="byName">
+        <property name="spec" value="extendService2"/>
+    </bean>
+
+    <bean id="diAutowireExtend" class="com.future.spring.rocket.entity.DiAutowireModelExtend" autowire="byType">
+    </bean>
+
+</beans>
