@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>lession17</artifactId>
+    <artifactId>lession19-B</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -38,18 +38,17 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>com.future.spring</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>lession19-A</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

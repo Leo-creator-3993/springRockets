@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" default-autowire="constructor">
+
+    <bean id="fatherBeanModel" class="com.future.spring.rocket.bean.definition.test3.FatherBeanModel"/>
+
+    <bean id="sonBeanModel" parent="fatherBeanModel">
+        <property name="name" value="YY"/>
+        <property name="age" value="55"/>
+    </bean>
+
+    <bean id="grandChildModel" parent="sonBeanModel">
+        <property name="desc" value="Hello child child"/>
+    </bean>
+</beans>

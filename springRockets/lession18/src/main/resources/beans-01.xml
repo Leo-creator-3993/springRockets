@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" default-autowire="constructor">
+
+    <bean id="car1" class="com.future.spring.rocket.bean.definition.test1.Car">
+        <property name="name" value="MZD"/>
+    </bean>
+
+    <bean id="car2" class="com.future.spring.rocket.bean.definition.test1.Car">
+        <property name="name" value="Ft"/>
+    </bean>
+
+    <bean id="user" class="com.future.spring.rocket.bean.definition.test1.User">
+        <property name="name" value="DD"/>
+        <property name="car" ref="car1"/>
+    </bean>
+</beans>
