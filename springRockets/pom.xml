@@ -32,6 +32,11 @@
         <module>lession19-B</module>
         <module>lession20</module>
         <module>lession21</module>
+        <module>lession22-A</module>
+        <module>lession22-B</module>
+        <module>lession23</module>
+        <module>lession24</module>
+        <module>lession25</module>
     </modules>
 
     <properties>
