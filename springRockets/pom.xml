@@ -46,6 +46,11 @@
         <module>lession30</module>
         <module>lession31</module>
         <module>lession32</module>
+        <module>lession33</module>
+        <module>lession34</module>
+        <module>lession35</module>
+        <module>lession36</module>
+        <module>lession37</module>
     </modules>
 
     <properties>
@@ -58,6 +63,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
@@ -81,6 +91,12 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
                 <version>${spring.version}</version>
             </dependency>
 
@@ -125,6 +141,13 @@
                 <artifactId>aspectjweaver</artifactId>
                 <version>1.9.22</version>
             </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.46</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
