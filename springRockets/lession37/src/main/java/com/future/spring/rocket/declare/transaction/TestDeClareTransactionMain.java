@@ -1,7 +1,10 @@
 package com.future.spring.rocket.declare.transaction;
 
+import com.future.spring.rocket.common.util.OtherUtil;
 import com.future.spring.rocket.declare.transaction.test1.MainConfig1;
 import com.future.spring.rocket.declare.transaction.test1.TransactionDeclareService1;
+import com.future.spring.rocket.declare.transaction.test2.MainConfig2;
+import com.future.spring.rocket.declare.transaction.test2.TransactionDeclareServiceA;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -76,5 +79,21 @@ public class TestDeClareTransactionMain {
 
         Object qResult = tranService1.list();
         System.out.println("qResult ==> " + qResult);
+    }
+
+    @Test
+    public void test3() {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig2.class);
+        TransactionDeclareServiceA serviceA = context.getBean(TransactionDeclareServiceA.class);
+        System.out.println("before:");
+        serviceA.printList();
+        OtherUtil.splitLinePrint();
+        try {
+            serviceA.m1();
+        } catch (Exception e) {
+            System.out.println("==> e:" + e);
+        }
+        System.out.println("after:");
+        serviceA.printList();
     }
 }
