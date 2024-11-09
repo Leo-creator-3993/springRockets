@@ -53,6 +53,10 @@
         <module>lession37</module>
         <module>lession38</module>
         <module>lession39</module>
+        <module>lession40</module>
+        <module>lession41</module>
+        <module>lession42</module>
+        <module>lession43</module>
     </modules>
 
     <properties>
@@ -65,6 +69,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-tx</artifactId>
@@ -149,7 +158,6 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>5.1.46</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 

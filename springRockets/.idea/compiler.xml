@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lession09" />
+        <module name="lession04" />
+        <module name="lession26" />
+        <module name="lession03" />
+        <module name="lession25" />
+        <module name="lession02" />
+        <module name="lession24" />
+        <module name="lession01" />
+        <module name="lession23" />
+        <module name="lession08" />
+        <module name="lession07" />
+        <module name="lession29" />
+        <module name="lession06" />
+        <module name="lession28" />
+        <module name="lession05" />
+        <module name="lession27" />
+        <module name="lession26-A" />
+        <module name="lession40" />
+        <module name="lession22-B" />
+        <module name="common" />
+        <module name="lession22-A" />
+        <module name="lession21" />
+        <module name="lession43" />
+        <module name="lession20" />
+        <module name="lession42" />
+        <module name="lession41" />
+        <module name="lession26-B" />
+        <module name="lession15" />
+        <module name="lession37" />
+        <module name="lession14" />
+        <module name="lession36" />
+        <module name="lession13" />
+        <module name="lession35" />
+        <module name="lession12" />
+        <module name="lession34" />
+        <module name="lession18" />
+        <module name="lession17" />
+        <module name="lession39" />
+        <module name="lession16" />
+        <module name="lession38" />
+        <module name="lession11" />
+        <module name="lession33" />
+        <module name="lession10" />
+        <module name="lession32" />
+        <module name="lession31" />
+        <module name="lession30" />
+        <module name="lession19-B" />
+        <module name="lession19-A" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
