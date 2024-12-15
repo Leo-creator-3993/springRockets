@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-// 加了Configuration注解则bean的生命周期受bean管理，对bean添加的注解修饰才能生效，
+// 加了Configuration注解则bean的生命周期受spring管理，对bean添加的注解修饰才能生效，
 // 否则没加则不受spring管理，添加对bean的注解是无法生效的
 @Configuration
 public class ConfigModelConfiguration {

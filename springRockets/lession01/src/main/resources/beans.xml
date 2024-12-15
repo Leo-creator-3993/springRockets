@@ -7,7 +7,7 @@
     <!--
     定义一个bean
     id：bean的唯一标识，可以通过这个标识从容器中获取这个bean对象
-    clss：这个bean的类型，完整类名称
+    class：这个bean的类型，完整类名称
     -->
     <bean id="rocketLaunch" class="com.future.spring.rocket.beans.RocketLaunch"/>
 
